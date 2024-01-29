@@ -1,0 +1,33 @@
+{% extends 'users/register.html'%}
+{% block body %}
+<div class="container" >
+    <div class="row p-5" >
+        <div class="col-md-5 offset-md-4">
+            <div class="card" style="width: 420px;  height:320px; ">
+                <div class="card-header bg-info pt-3">
+                    <div class="card-title">
+                        Login
+                    </div>
+                </div>
+                <div class="card-body d-flex justify-content-center ">
+
+                    <form method="POST">
+                        {% csrf_token %}
+                        {%for field in form %}
+                            <div class="form-group m-2">
+                                {{field.name}}
+                                {{field}}
+                            </div>
+                        {% endfor %}
+                        <div class="ps-2">
+                            <button type="submit" class="btn btn-dark " >Login</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{%endblock%}

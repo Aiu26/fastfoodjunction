@@ -1,0 +1,5 @@
+{% extends 'users/register.html'%}
+{% block body %}
+<h1 class="lead m-3">Hi, {{user.username}}</h1>
+<img src="{{ user.profile.image.url }}" class="rounded-circle" style="width: 150px; height: 150px;">
+{% endblock %}

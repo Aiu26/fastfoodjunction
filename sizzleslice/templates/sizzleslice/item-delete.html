@@ -1,0 +1,10 @@
+{% extends 'sizzleslice/base.html'%}
+{% block body %}
+<form method="POST" >
+    {% csrf_token %}
+    <h2 class="lead">Are you sure you want to delete the item {{item.item_name}} ?</h2>
+    <button class=" btn btn-primary" type="submit">Confirm</button>
+
+</form>
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'sizzleslice/base.html'%}
+{% block body %}
+<h1>{{object.item_name}}</h1>
+<div class="container d-flex">
+    <div class="row justify-content-evenly m-3 pb-5">
+        <div class="col-6">
+            <img src="{{item.item_image}}" class=" card" class="h-100 d-inline-block" style="width: 420px; " />
+        </div>
+         <div class=" col-10 d-flex ">
+            <h2 class="lead p-5 m-2 shadow-1 ">{{object.item_desc}}</h2>
+            <h3 class="align-self-end ">Rs{{object.item_price}}</h3>
+        </div>
+        <div class="align-self-end" >
+        <a class="btn btn-danger" href="{% url 'sizzleslice:delete_item' item.id %}">Delete</a>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+
