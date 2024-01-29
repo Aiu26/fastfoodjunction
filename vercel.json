@@ -1,0 +1,14 @@
+{
+    "builds": [
+      {
+        "src": "fastfoodjunction/wsgi.py",
+        "use": "@vercel/python"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "fastfoodjunction/wsgi.py"
+      }
+    ]
+}
