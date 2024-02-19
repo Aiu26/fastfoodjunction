@@ -29,10 +29,7 @@ SECRET_KEY = environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = environ.get('DEBUG') == 'True'
 
-if 'PRODUCTION_HOST' in environ:
-    ALLOWED_HOSTS = [environ.get('PRODUCTION_HOST')]
-else:
-    ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app']
 
 
 # Application definition
