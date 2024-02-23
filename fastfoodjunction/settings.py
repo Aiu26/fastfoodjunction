@@ -34,6 +34,9 @@ if DEBUG:
 else:
     ALLOWED_HOSTS = ["fastfoodjunction.onrender.com"]
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://fastfoodjunction.onrender.com'
+]
 
 # Application definition
 
