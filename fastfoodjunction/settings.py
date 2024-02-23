@@ -29,10 +29,10 @@ SECRET_KEY = environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = environ.get('DEBUG') == 'True'
 
-# if DEBUG:
-#     ALLOWED_HOSTS = []
-# else:
-ALLOWED_HOSTS = ["fastfoodjunction.onrender.com"]
+if DEBUG:
+    ALLOWED_HOSTS = []
+else:
+    ALLOWED_HOSTS = ["fastfoodjunction.onrender.com"]
 
 
 # Application definition
